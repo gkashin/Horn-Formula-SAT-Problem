@@ -10,9 +10,9 @@ The input of the Horn-formula is divided into parts which look like this:
 * *varCount* - number of variables
 * *variables* - variables written with a space
 * *implicationClausesCount* - number of implication clauses
-* *implicationClauses* - represented as follows: x y z > w (**>** - means implication)
+* *implicationClauses* - list of the implication clauses represented as follows: x y z > w (**>** - means implication)
 * *pureNegativeClausesCount* - number of pure negative clauses
-* *pureNegativeClauses* - represented as follows: x y z; (separated by semicolon)
+* *pureNegativeClauses* - list of the pure negative clauses represented as follows: x y z; (separated by semicolon)
 
 ## Example
 ### Input
