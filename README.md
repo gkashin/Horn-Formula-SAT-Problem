@@ -16,7 +16,7 @@ The input of the Horn-formula is divided into parts which look like this:
 
 ## Example
 ### Input
-1. (w * y * z -> x) * (x * z -> w) * (x -> y) * (-> x) * (x * y -> w) * (~z)
+1. (w ∧ y ∧ z → x) ∧ (x ∧ z → w) ∧ (x → y) ∧ (→ x) ∧ (x ∧ y → w) ∧ (¬z)
 ```
 4 // number of variables
 x y z w // variables
@@ -29,7 +29,7 @@ x y > w
 1 // number of pure negative clauses
 z; // pure negative clause
 ```
-2. (w * y * z -> x) * (x * z -> w) * (x -> y) * (-> x) * (x * y -> w) * (~w + ~x + ~y) * (~z)
+2. (w ∧ y ∧ z → x) ∧ (x ∧ z → w) ∧ (x → y) ∧ (→ x) ∧ (x ∧ y → w) ∧ (¬w ∨ ¬x ∨ ¬y) ∧ (¬z)
 ```
 4 
 x y z w 
