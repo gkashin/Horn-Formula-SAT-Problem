@@ -16,7 +16,7 @@ The input of the Horn-formula is divided into parts which look like this:
 
 ## Example
 ### Input
-Horn-formula: (w * y * z -> x) * (x * z -> w) * (x -> y) * (-> x) * (x * y -> w) * (~z)
+1. (w * y * z -> x) * (x * z -> w) * (x -> y) * (-> x) * (x * y -> w) * (~z)
 ```
 4 // number of variables
 x y z w // variables
@@ -31,11 +31,29 @@ z; // pure negative clause
 
 ```
 
+2. (w * y * z -> x) * (x * z -> w) * (x -> y) * (-> x) * (x * y -> w) * (~w + ~x + ~y) * (~z)
+```
+4 // number of variables
+x y z w // variables
+5 // number of implication clauses
+w y z > x // implication clauses
+x z > w
+x > y
+> x
+x y > w
+2 // number of pure negative clauses
+w x y;
+z; // pure negative clause
+```
 ### Output
-Satisfying set of variable values
+1. Satisfying set of variable values
 ```
 w: 1
 x: 1
 y: 1
 z: 0
+```
+2. Message of unsatisfiability
+```
+Function is not satisfiable
 ```
