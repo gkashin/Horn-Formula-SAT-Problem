@@ -28,22 +28,20 @@ x > y
 x y > w
 1 // number of pure negative clauses
 z; // pure negative clause
-
 ```
-
 2. (w * y * z -> x) * (x * z -> w) * (x -> y) * (-> x) * (x * y -> w) * (~w + ~x + ~y) * (~z)
 ```
-4 // number of variables
-x y z w // variables
-5 // number of implication clauses
-w y z > x // implication clauses
+4 
+x y z w 
+5 
+w y z > x 
 x z > w
 x > y
 > x
 x y > w
-2 // number of pure negative clauses
+2 
 w x y;
-z; // pure negative clause
+z; 
 ```
 ### Output
 1. Satisfying set of variable values
